@@ -1,0 +1,6 @@
+npm-debug.log
+content/data/*
+node_modules/*
+content/data/*
+content/images/*
+*.db

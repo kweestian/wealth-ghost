@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	{{! Document Settings }}
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	{{! Page Meta }}
+	<title>{{meta_title}}</title>
+	<meta name="description" content="{{meta_description}}">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- fav icons -->
+	<link rel="shortcut icon" href="{{asset "images/favicon.ico"}}">
+	<link rel="apple-touch-icon" href="{{asset "images/apple-touch-icon.png"}}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{asset "images/apple-touch-icon-72x72.png"}}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{asset "images/apple-touch-icon-114x114.png"}}">
+	<!-- stylesheets -->
+	{{! Styles'n'Scripts }}
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{{asset "css/bootstrap.min.css"}}">
+	<link rel="stylesheet" href="{{asset "css/font-awesome.min.css"}}">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}">
+	{{! inserting theme config partial}}
+	{{> config}}
+	{{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+	{{! insert header partial}}
+	{{> header}}
+
+	{{! insert topbar partial}}
+	{{> topbar}}
+
+	{{{body}}}
+
+	{{! insert sidebar partial}}
+	{{> sidebar}}
+	{{! insert footer partial}}
+	{{> footer}}

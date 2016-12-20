@@ -1,0 +1,57 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+<div class="main-content-wrapper">
+	<section class="main-content clearfix">
+		<div id="item-container">
+			{{! insert loop for each post}}
+			{{#foreach posts}}
+			<article id="{{id}}" class="{{post_class}} item">
+				{{#if image}}
+					<div class="featured-media"><img src="{{image}}" alt="Post-image" class="img-responsive"></div>
+				{{/if}}
+				{{#if featured}}
+				<div class="featured-ribbon">
+					<i class="fa fa-star"></i>Featured
+				</div>
+				{{/if}}
+				<div class="post-content">
+					<header>
+						<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+						<div class="post-meta">{{date format="MMMM DD, YYYY"}}</div>
+					</header>
+					<div class="post-excerpt">
+						{{content words="32"}}
+					</div>
+					<div class="tag-list">
+							{{tags separator=""}}
+					</div>
+					<hr/>
+					<footer class="clearfix">
+						<div class="pull-left">
+							{{#author}}
+							{{#if image}}
+							<a href="{{url}}"><img src="{{image}}" alt="Author image" class="avatar"></a>
+							{{else}}
+							<a href="{{url}}"><img src="{{asset "images/default-user-image.jpg"}}" alt="Author image" class="avatar"></a>
+							{{/if}}
+							<a href="{{url}}" class="author-name">{{name}}</a>
+							{{/author}}
+						</div>
+						<div class="pull-right comments">
+							<i class="fa fa-comment-o"></i> <a href="{{url}}#disqus_thread">0 Comments</a>
+						</div>
+					</footer>
+				</div>
+			</article>
+			{{/foreach}}	
+		</div>
+		<div class="pagination-wrap">
+			{{! Previous/next page links - displayed on every page }}
+			{{pagination}}
+			<a href="" class="page-loader">
+				Load more post
+			</a>
+		</div>
+	</section>
+</div>
