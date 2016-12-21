@@ -1,0 +1,60 @@
+{{! This is the header - it will be output using this markup }}
+
+<header class="header">
+	{{! TOP AREA START }}
+	<div class="top-area">
+		<div class="container">
+			{{! SOCIAL MEDIA START }}
+			<div class="header-social-media">
+				<ul class="header-social-links">
+					{{#if @blog.facebook}}
+						<li><a href="{{facebook_url}}" title="Share to Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+					{{/if}}
+					{{#if @blog.twitter}}
+						<li><a href="{{twitter_url}}" title="Share to Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+					{{/if}}
+				</ul>
+			</div>
+			{{! SOCIAL MEDIA END }}
+			{{! LOGO START }}
+			{{#if @blog.logo}}
+				<div class="header-logo">
+					<a class="site-logo" href="{{@blog.url}}">
+						<img src="{{@blog.logo}}" alt="{{@blog.title}}">
+					</a>
+				</div>
+			{{/if}}
+			{{! LOGO END }}
+		</div>
+	</div>
+	{{! TOP AREA END }}
+	{{! NAV MENU START }}
+	<div class="menu-area">
+		<div class="container">
+			<div class="row">
+				<nav class="navbar">
+					{{! MOBILE MENU START }}
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					{{! MOBILE MENU END }}
+					{{! MENU LIST START }}
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+
+							{{navigation}}
+
+						</ul>
+					</div>
+					{{! MENU LIST END }}
+				</nav>
+			</div>
+		</div>
+	</div>
+	{{! NAV MENU END }}
+</header>

@@ -1,0 +1,169 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+	attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+{{#post}}
+{{^has tag="left,right"}}
+<div class="site-page-content">
+	{{! PAGE START }}
+	<div class="page-content">
+		<article class="page">
+			{{! PAGE TITLE START }}
+			<h1 class="page-title">{{title}}</h1>
+			{{! PAGE TITLE END }}
+			{{! PAGE BANNER START }}
+			{{#if image}}
+				<div class="page-banner-image">
+					<img src="{{image}}" alt="{{title}}" />
+				</div>
+			{{/if}}
+			{{! PAGE BANNER END }}
+			<h4>Columns</h4>
+         <p>Pellentesque sit amet consequat eros. In hac habitasse platea dictumst. Vestibulum iaculis odio a magna fermentum, et hendrerit ipsum interdum. In ante ligula, dictum vitae euismod sit amet, consequat vel risus. Duis posuere nibh viverra sem iaculis scelerisque. Aenean vitae neque sollicitudin, lacinia lacus eu, mollis lorem. Curabitur mollis tristique tristique. Sed sit amet lorem sed nibh tincidunt sagittis.</p>
+         <div class="row">
+           <div class="col-sm-6 col-xs-12">
+             <p>Pellentesque sit amet consequat eros. In hac habitasse platea dictumst. Vestibulum iaculis odio a magna fermentum, et hendrerit ipsum interdum. In ante ligula, dictum vitae euismod sit amet, consequat vel risus. Duis posuere nibh viverra sem iaculis scelerisque. Aenean vitae neque sollicitudin, lacinia lacus eu, mollis lorem. Curabitur mollis tristique tristique. Sed sit amet lorem sed nibh tincidunt sagittis.</p>
+           </div>
+           <div class="col-sm-6 col-xs-12">
+             <p>Pellentesque sit amet consequat eros. In hac habitasse platea dictumst. Vestibulum iaculis odio a magna fermentum, et hendrerit ipsum interdum. In ante ligula, dictum vitae euismod sit amet, consequat vel risus. Duis posuere nibh viverra sem iaculis scelerisque. Aenean vitae neque sollicitudin, lacinia lacus eu, mollis lorem. Curabitur mollis tristique tristique. Sed sit amet lorem sed nibh tincidunt sagittis.</p>
+           </div>
+         </div>
+         <div class="row">
+           <div class="col-sm-4 col-xs-12">
+             <p>Pellentesque sit amet consequat eros. In hac habitasse platea dictumst. Vestibulum iaculis odio a magna fermentum, et hendrerit ipsum interdum. In ante ligula, dictum vitae euismod sit amet, consequat vel risus. Duis posuere nibh viverra sem iaculis scelerisque. Aenean vitae neque sollicitudin, lacinia lacus eu, mollis lorem. Curabitur mollis tristique tristique. Sed sit amet lorem sed nibh tincidunt sagittis.</p>
+           </div>
+           <div class="col-sm-4 col-xs-12">
+             <p>Pellentesque sit amet consequat eros. In hac habitasse platea dictumst. Vestibulum iaculis odio a magna fermentum, et hendrerit ipsum interdum. In ante ligula, dictum vitae euismod sit amet, consequat vel risus. Duis posuere nibh viverra sem iaculis scelerisque. Aenean vitae neque sollicitudin, lacinia lacus eu, mollis lorem. Curabitur mollis tristique tristique. Sed sit amet lorem sed nibh tincidunt sagittis.</p>
+           </div>
+           <div class="col-sm-4 col-xs-12">
+             <p>Pellentesque sit amet consequat eros. In hac habitasse platea dictumst. Vestibulum iaculis odio a magna fermentum, et hendrerit ipsum interdum. In ante ligula, dictum vitae euismod sit amet, consequat vel risus. Duis posuere nibh viverra sem iaculis scelerisque. Aenean vitae neque sollicitudin, lacinia lacus eu, mollis lorem. Curabitur mollis tristique tristique. Sed sit amet lorem sed nibh tincidunt sagittis.</p>
+           </div>
+         </div>
+         <hr style="margin-top: 5px; clear: both;" />
+         <h4>Headings</h4>
+         <h1 style="color:#585858;">Heading 1</h1>
+         <p>Pellentesque sit amet consequat eros. In hac habitasse platea dictumst. Vestibulum iaculis odio a magna fermentum, et hendrerit ipsum interdum. In ante ligula, dictum vitae euismod sit amet, consequat vel risus. Duis posuere nibh viverra sem iaculis scelerisque. Aenean vitae neque sollicitudin, lacinia lacus eu, mollis lorem. Curabitur mollis tristique tristique. Sed sit amet lorem sed nibh tincidunt sagittis.</p>
+         <h2 style="color:#585858;">Heading 2</h2>
+         <p>Pellentesque sit amet consequat eros. In hac habitasse platea dictumst. Vestibulum iaculis odio a magna fermentum, et hendrerit ipsum interdum. In ante ligula, dictum vitae euismod sit amet, consequat vel risus. Duis posuere nibh viverra sem iaculis scelerisque. Aenean vitae neque sollicitudin, lacinia lacus eu, mollis lorem. Curabitur mollis tristique tristique. Sed sit amet lorem sed nibh tincidunt sagittis.</p>
+         <h3 style="color:#585858;">Heading 3</h3>
+         <p>Pellentesque sit amet consequat eros. In hac habitasse platea dictumst. Vestibulum iaculis odio a magna fermentum, et hendrerit ipsum interdum. In ante ligula, dictum vitae euismod sit amet, consequat vel risus. Duis posuere nibh viverra sem iaculis scelerisque. Aenean vitae neque sollicitudin, lacinia lacus eu, mollis lorem. Curabitur mollis tristique tristique. Sed sit amet lorem sed nibh tincidunt sagittis.</p>
+         <h4 style="color:#585858;">Heading 4</h4>
+         <p>Pellentesque sit amet consequat eros. In hac habitasse platea dictumst. Vestibulum iaculis odio a magna fermentum, et hendrerit ipsum interdum. In ante ligula, dictum vitae euismod sit amet, consequat vel risus. Duis posuere nibh viverra sem iaculis scelerisque. Aenean vitae neque sollicitudin, lacinia lacus eu, mollis lorem. Curabitur mollis tristique tristique. Sed sit amet lorem sed nibh tincidunt sagittis.</p>
+         <hr style="margin-top: 5px; clear: both;" />
+         <h4>Blockouote</h4>
+         <p>Praesent dictum lacus elit, non aliquam ex blandit a. Pellentesque ornare ante et auctor finibus. Proin a faucibus tortor. Sed tristique faucibus venenatis. Fusce lacinia feugiat augue. Nullam nibh metus, placerat id aliquam eget, laoreet eget lectus. Ut egestas dui finibus iaculis cursus. Quisque ac pretium risus. In ipsum eros, ultrices scelerisque est sed, dapibus iaculis lacus. Curabitur magna ligula, malesuada vitae hendrerit sit amet, maximus eu est. Aliquam erat volutpat. Morbi tincidunt, ligula quis imperdiet tempor, magna quam eleifend dolor, in finibus arcu tortor ac nibh. Nam in ipsum dapibus, sodales est nec, convallis</p>
+         <hr style="margin-top: 5px; clear: both;" />
+         <blockquote>
+         <div class="blockquote-content">
+         <p>Aliquam erat volutpat. Vivamus aliquam tempor sodales. Cras libero orci, sodales non sapien sit amet, porttitor lobortis erat. Aenean euismod auctor aliquam. Cras convallis sem ut purus facilisis malesuada ut ac urna. Pellentesque et laoreet nisi.</p>
+         <div class="writer">- Coco Chanel</div>
+         </div>
+         </blockquote>
+         <hr style="margin-top: 5px; clear: both;" />
+         <h4>Highlights</h4>
+         <p>Fusce a imperdiet mi. <span class="label label-success">Suspendisse</span> ut dolor ullamcorper, laoreet risus convallis, accumsan urna. Vivamus at rutrum felis, nec eleifend diam. Curabitur dui lectus, pulvinar non libero quis, tincidunt vehicula justo. <span class="label label-info">Donec sit amet tellus</span> sit amet lacus mollis volutpat. Vivamus id sem semper sapien placerat laoreet sed in justo. Duis in eros a neque elementum aliquam bibendum vitae turpis. Praesent lobortis vel mauris et aliquam. <span class="label label-danger">Aenean blandit quam</span> vitae tellus ultrices maximus. <span class="label label-warning">Nullam</span> laoreet sem et nisi egestas, eget luctus arcu dignissim.</p>
+
+		</article>
+	</div>
+	{{! PAGE END }}
+</div>
+{{/has}}
+{{#has tag="left"}}
+{{! PAGE TITLE START }}
+<h1 class="page-title">{{title}}</h1>
+{{! PAGE TITLE END }}
+{{! PAGE CONTENT START }}
+<div class="row">
+{{! PAGE CONTENT START }}
+	<div class="home-content">
+		{{! SITE CONTENT LEFT START }}
+		<div class="col-sm-4 col-xs-12 site-content-right">
+			<aside class="sidebar-right sidebar">
+				{{! WIDGET START }}
+				{{> "last-posts-widget" }}
+				{{! WIDGET END }}
+
+				{{! WIDGET START }}
+				{{> "social-links-widget" }}
+				{{! WIDGET END }}
+
+				{{! WIDGET START }}
+				{{> "twitter-widget" }}
+				{{! WIDGET END }}
+
+				{{! WIDGET START }}
+				{{> "facebook-widget" }}
+				{{! WIDGET END }}
+
+				{{! WIDGET START }}
+				{{> "advertisement-widget" }}
+				{{! WIDGET END }}
+			</aside>
+		</div>
+		{{! SITE CONTENT LEFT END }}
+		{{! SITE CONTENT RIGHT START }}
+		<div class="col-sm-8 col-xs-12 site-content-left">
+			{{! PAGE START }}
+			<div class="page-content">
+				<article class="page">
+				{{content}}
+				</article>
+			</div>
+			{{! PAGE END }}
+		</div>
+		{{! SITE CONTENT RIGHT END }}
+	</div>
+	{{! PAGE CONTENT END }}
+</div>
+{{/has}}
+{{#has tag="right"}}
+{{! PAGE TITLE START }}
+<h1 class="page-title">{{title}}</h1>
+{{! PAGE TITLE END }}
+{{! PAGE CONTENT START }}
+<div class="row">
+{{! PAGE CONTENT START }}
+    <div class="home-content">
+        {{! SITE CONTENT LEFT START }}
+        <div class="col-sm-8 col-xs-12 site-content-left">
+            {{! PAGE START }}
+            <div class="page-content">
+                <article class="page">
+                {{content}}
+                </article>
+            </div>
+            {{! PAGE END }}
+        </div>
+        {{! SITE CONTENT LEFT END }}
+        {{! SITE CONTENT RIGHT START }}
+        <div class="col-sm-4 col-xs-12 site-content-right">
+            <aside class="sidebar-right sidebar">
+                {{! WIDGET START }}
+                {{> "last-posts-widget" }}
+                {{! WIDGET END }}
+
+                {{! WIDGET START }}
+                {{> "social-links-widget" }}
+                {{! WIDGET END }}
+
+                {{! WIDGET START }}
+                {{> "twitter-widget" }}
+                {{! WIDGET END }}
+
+                {{! WIDGET START }}
+                {{> "facebook-widget" }}
+                {{! WIDGET END }}
+
+                {{! WIDGET START }}
+                {{> "advertisement-widget" }}
+                {{! WIDGET END }}
+            </aside>
+        </div>
+        {{! SITE CONTENT RIGHT END }}
+    </div>
+    {{! PAGE CONTENT END }}
+</div>
+{{/has}}
+{{/post}}

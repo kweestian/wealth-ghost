@@ -1,0 +1,62 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{#tag}}
+{{! CATEGORY TITLE START }}
+<section class="category-archive-title">
+  <h1>Category: <span>{{name}}</span></h1>
+  {{#if description}}
+    <p>{{description}}</p>
+  {{/if}}
+</section>
+{{! CATEGORY TITLE END }}
+{{/tag}}
+
+<div class="row">
+  {{! HOME CONTENT START }}
+  <div class="home-content">
+    {{! SITE CONTENT LEFT START }}
+    <div class="col-sm-8 col-xs-12 site-content-left">
+      {{! POST LIST START }}
+      <div class="home-two-post-list">
+          {{> "loop-archive"}}
+      </div>
+      {{! POST LIST END }}
+
+      {{! ADVERT START }}
+      {{> "advert" }}
+      {{! ADVERT END }}
+
+      {{! PAGINATION START }}
+      {{ pagination }}
+      {{! PAGINATION END }}
+    </div>
+    {{! SITE CONTENT LEFT END }}
+    {{! SITE CONTENT RIGHT START }}
+    <div class="col-sm-4 col-xs-12 site-content-right">
+        <aside class="sidebar-right sidebar">
+            {{! WIDGET START }}
+            {{> "last-posts-widget" }}
+            {{! WIDGET END }}
+
+            {{! WIDGET START }}
+            {{> "social-links-widget" }}
+            {{! WIDGET END }}
+              
+            {{! WIDGET START }}
+            {{> "twitter-widget" }}
+            {{! WIDGET END }}
+
+            {{! WIDGET START }}
+            {{> "facebook-widget" }}
+            {{! WIDGET END }}
+
+            {{! WIDGET START }}
+            {{> "advertisement-widget" }}
+            {{! WIDGET END }}
+      </aside>
+    </div>
+    {{! SITE CONTENT RIGHT END }}
+  </div>
+  {{! HOME CONTENT END }}
+</div>

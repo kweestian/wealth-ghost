@@ -1,0 +1,98 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! Everything inside the #author tags pulls data from the author }}
+{{#author}}
+
+		{{! CATEGORY TITLE START }}
+		<section class="category-archive-title author-archive-title">
+			<h1>Author: <span>{{name}}</span></h1>
+		</section>
+		{{! CATEGORY TITLE END }}
+
+		{{! AUTHOR START }}
+		<div class="author-page-info-area">
+			<div class="post-author">
+				<aside class="author-info-area">
+					<div class="image">
+						<a class="avatar" href="{{url}}" style="background-image: url({{image}});"></a>
+					</div>
+					<div class="desc">
+						<h4>About Me</h4>
+						<h3>{{name}}</h3>
+						<p>{{bio}}</p>
+						<div class="author-social-link">
+							<ul>
+								{{#if facebook}}
+									<li><a href="{{facebook_url}}"><i class="fa fa-facebook"></i>{{facebook}}</a></li>
+								{{/if}}
+								{{#if twitter}}
+									<li><a href="{{twitter_url}}"><i class="fa fa-twitter"></i>{{twitter}}</a></li>
+								{{/if}}
+								{{#if location}}
+									<li><i class="fa fa-map-marker"></i>{{location}}</li>
+								{{/if}}
+								{{#if website}}
+									<li><a href="{{website}}"><i class="fa fa-link"></i>{{website}}</a></li>
+								{{/if}}
+							</ul>
+						</div>
+					</div>
+				</aside>
+			</div>
+		</div>
+		{{! AUTHOR END }}
+
+{{/author}}
+
+
+<div class="row">
+	{{! HOME CONTENT START }}
+	<div class="home-content">
+		{{! SITE CONTENT LEFT START }}
+		<div class="col-sm-8 col-xs-12 site-content-left">
+
+			{{! POST LIST START }}
+			<div class="home-two-post-list">
+				{{> "loop-archive"}}
+			</div>
+			{{! POST LIST END }}
+
+			{{! ADVERT START }}
+			{{> "advert" }}
+			{{! ADVERT END }}
+
+			{{! PAGINATION START }}
+			{{ pagination }}
+			{{! PAGINATION END }}
+
+		</div>
+		{{! SITE CONTENT LEFT END }}
+		{{! SITE CONTENT RIGHT START }}
+		<div class="col-sm-4 col-xs-12 site-content-right">
+			<aside class="sidebar-right sidebar">
+				{{! WIDGET START }}
+            {{> "last-posts-widget" }}
+            {{! WIDGET END }}
+
+				{{! WIDGET START }}
+				{{> "social-links-widget" }}
+				{{! WIDGET END }}
+					
+				{{! WIDGET START }}
+				{{> "twitter-widget" }}
+				{{! WIDGET END }}
+
+				{{! WIDGET START }}
+				{{> "facebook-widget" }}
+				{{! WIDGET END }}
+
+				{{! WIDGET START }}
+				{{> "advertisement-widget" }}
+				{{! WIDGET END }}
+			</aside>
+		</div>
+		{{! SITE CONTENT RIGHT END }}
+	</div>
+	{{! HOME CONTENT END }}
+</div>

@@ -1,0 +1,125 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+	attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+{{#post}}
+{{^has tag="left,right"}}
+<div class="site-page-content">
+	{{! PAGE START }}
+	<div class="page-content">
+		<article class="page">
+			{{! PAGE TITLE START }}
+			<h1 class="page-title">{{title}}</h1>
+			{{! PAGE TITLE END }}
+			{{! PAGE BANNER START }}
+			{{#if image}}
+				<div class="page-banner-image">
+					<img src="{{image}}" alt="{{title}}" />
+				</div>
+			{{/if}}
+			{{! PAGE BANNER END }}
+			{{content}}
+		</article>
+	</div>
+	{{! PAGE END }}
+</div>
+{{/has}}
+{{#has tag="left"}}
+{{! PAGE TITLE START }}
+<h1 class="page-title">{{title}}</h1>
+{{! PAGE TITLE END }}
+{{! PAGE CONTENT START }}
+<div class="row">
+{{! PAGE CONTENT START }}
+	<div class="home-content">
+		{{! SITE CONTENT LEFT START }}
+		<div class="col-sm-4 col-xs-12 site-content-right">
+			<aside class="sidebar-right sidebar">
+				{{! WIDGET START }}
+				{{> "last-posts-widget" }}
+				{{! WIDGET END }}
+
+				{{! WIDGET START }}
+				{{> "social-links-widget" }}
+				{{! WIDGET END }}
+
+				{{! WIDGET START }}
+				{{> "twitter-widget" }}
+				{{! WIDGET END }}
+
+				{{! WIDGET START }}
+				{{> "facebook-widget" }}
+				{{! WIDGET END }}
+
+				{{! WIDGET START }}
+				{{> "advertisement-widget" }}
+				{{! WIDGET END }}
+			</aside>
+		</div>
+		{{! SITE CONTENT LEFT END }}
+		{{! SITE CONTENT RIGHT START }}
+		<div class="col-sm-8 col-xs-12 site-content-left">
+			{{! PAGE START }}
+			<div class="page-content">
+				<article class="page">
+				{{content}}
+				</article>
+			</div>
+			{{! PAGE END }}
+		</div>
+		{{! SITE CONTENT RIGHT END }}
+	</div>
+	{{! PAGE CONTENT END }}
+</div>
+{{/has}}
+{{#has tag="right"}}
+{{! PAGE TITLE START }}
+<h1 class="page-title">{{title}}</h1>
+{{! PAGE TITLE END }}
+{{! PAGE CONTENT START }}
+<div class="row">
+{{! PAGE CONTENT START }}
+    <div class="home-content">
+        {{! SITE CONTENT LEFT START }}
+        <div class="col-sm-8 col-xs-12 site-content-left">
+            {{! PAGE START }}
+            <div class="page-content">
+                <article class="page">
+                {{content}}
+                </article>
+            </div>
+            {{! PAGE END }}
+        </div>
+        {{! SITE CONTENT LEFT END }}
+        {{! SITE CONTENT RIGHT START }}
+        <div class="col-sm-4 col-xs-12 site-content-right">
+            <aside class="sidebar-right sidebar">
+                {{! WIDGET START }}
+                {{> "last-posts-widget" }}
+                {{! WIDGET END }}
+
+                {{! WIDGET START }}
+                {{> "social-links-widget" }}
+                {{! WIDGET END }}
+
+                {{! WIDGET START }}
+                {{> "twitter-widget" }}
+                {{! WIDGET END }}
+
+                {{! WIDGET START }}
+                {{> "facebook-widget" }}
+                {{! WIDGET END }}
+
+                {{! WIDGET START }}
+                {{> "advertisement-widget" }}
+                {{! WIDGET END }}
+            </aside>
+        </div>
+        {{! SITE CONTENT RIGHT END }}
+    </div>
+    {{! PAGE CONTENT END }}
+</div>
+{{/has}}
+{{/post}}

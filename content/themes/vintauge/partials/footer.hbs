@@ -1,0 +1,48 @@
+{{! This is the footer - it will be output using this markup }}
+
+<footer class="footer">
+  <div class="footer-widget">
+    <div class="container">
+      <aside class="sidebar-footer sidebar">
+        <div class="row">
+          {{! WIDGET START }}
+          <div class="col-sm-6 col-xs-12">
+            <div class="sidebar-right-wrap widget-box widget_text">
+              <div class="widget-title">
+                <h4>Thank you for reading the Wealth Blog</h4>
+              </div>
+              <div class="widget-content">
+                <p>{{@blog.description}}</p>
+              </div>
+            </div>
+          </div>
+          {{! WIDGET END }}
+
+          {{! WIDGET START }}
+          <!-- {{> "text-widget" }} -->
+          {{! WIDGET END }}
+
+          {{! WIDGET START }}
+          {{> "subscriptions-widget" }}
+          {{! WIDGET END }}
+        </div>
+      </aside>
+    </div>
+  </div>
+  {{! INSTAGRAM START }}
+  <div class="footer-instagram">
+    <div id="owl2row-plugin" class="owl-carousels">
+      <div class="title">Follow Us @ Instagram</div>
+      <div id="instafeed" class="owl2row-plugin"></div>
+    </div>
+  </div>
+  {{! INSTAGRAM END }}
+  {{! COPYRIGHT START }}
+  <div class="copyright">
+    <div class="container">
+      <p class="pull-left">&copy; {{date format="YYYY"}} {{@blog.title}}. All Right Reserved.</p>
+      <div class="top-icon"><i class="fa fa-chevron-up"></i></div>
+    </div>
+  </div>
+  {{! COPYRIGHT END }}
+</footer>

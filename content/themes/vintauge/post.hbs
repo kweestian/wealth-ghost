@@ -1,0 +1,166 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+	the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+	<div class="row">
+		<div class="home-content">
+			{{! SITE CONTENT LEFT START }}
+				<div class="col-sm-8 col-xs-12 site-content-left">
+					{{! POST START }}
+					<div class="page-content">
+						<article class="post format-standard">
+							{{! POST HEADER START }}
+							<div class="post-header">
+								{{#foreach tags}}
+									<a class="category" href="{{url}}">{{name}}</a>
+								{{/foreach}}
+								<ul>
+									<li>{{author}}</li>
+									<li class="separate"></li>
+									<li><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM D, YYYY"}}</time></li>
+								</ul>
+								<h1 class="post-title">{{title}}</h1>
+							</div>
+							{{! POST HEADER END }}
+							{{! POST IMAGE START }}
+							<div class="post-img">
+								<img src="{{image}}" alt="{{title}}" />
+							</div>
+							{{! POST IMAGE END }}
+							{{! POST ENTRY START }}
+							<div class="post-entry clearfix">
+								{{content}}
+							</div>
+							{{! POST ENTRY END }}
+							{{! POST TAGS START }}
+						<div class="post-tags">
+							{{#if tags}}
+								<div class="single-tag-list">
+									<span class="single-tag-list-title">Tags</span>
+									{{#foreach tags}}
+										<span><a href="{{url}}" title="{{name}}">{{name}}</a></span>
+									{{/foreach}}
+								</div>
+							{{/if}}
+							<ul class="post-social-icons">
+								<li class="comment"><a href="#"><i class="fa fa-comment"></i></a></li>
+								<li class="share">
+									<a><i class="fa fa-share-alt"></i></a>
+									<div class="share-social-media-links">
+										<ul>
+											<li><a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" title="Share to Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+											<li><a href="https://twitter.com/home?status={{url absolute="true"}}%20{{tags prefix="%23" separator="%20%23" autolink="false"}}" title="Share to Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+											<li><a href="https://plus.google.com/share?url={{url absolute="true"}}" title="Share to Google+" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+											<li><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{url absolute="true"}}&amp;title={{encode title}}&amp;summary={{excerpt words="45"}}&amp;source={{@blog.title}}" title="Share to Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+											<li><a href="https://pinterest.com/pin/create/button/?{{url absolute="true"}}{{#if image}}&amp;media={{@blog.url}}{{image}}{{/if}}&amp;description={{excerpt words="20"}}" title="Share to Pinterest" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+						{{! POST TAGS END }}
+						{{! POST AUTHOR START }}
+						{{#author}}
+							<div class="post-author">
+								<aside class="author-info-area">
+									<div class="image">
+										<a class="avatar" href="{{url}}" style="background-image:url({{image}})"></a>
+									</div>
+									<div class="desc">
+										<h4>About Me</h4>
+										<h3>{{name}}</h3>
+										<p>{{bio}}</p>
+										<div class="author-social-link">
+											<ul>
+												{{#if facebook}}
+													<li><a href="{{facebook_url}}"><i class="fa fa-facebook"></i>{{facebook}}</a></li>
+												{{/if}}
+												{{#if twitter}}
+													<li><a href="{{twitter_url}}"><i class="fa fa-twitter"></i>{{twitter}}</a></li>
+												{{/if}}
+												{{#if location}}
+													<li><i class="fa fa-map-marker"></i>{{location}}</li>
+												{{/if}}
+												{{#if website}}
+													<li><a href="{{website}}"><i class="fa fa-link"></i>{{website}}</a></li>
+												{{/if}}
+											</ul>
+										</div>
+									</div>
+								</aside>
+							</div>
+						{{/author}}
+						{{! POST AUTHOR END }}
+						{{! POST NAV START }}
+						<div class="post-nav">
+							<nav>
+								<ul class="pager">
+									{{#prev_post}}
+										<li class="previous">
+											<a href="{{url}}" rel="prev">
+												<span aria-hidden="true"></span>Previous Post
+												<div class="pager-post-name">
+												<h3>{{title}}</h3></div>
+											</a>
+										</li>
+									{{/prev_post}}
+									{{#next_post}}
+										<li class="next">
+											<a href="{{url}}" rel="next">
+												 <span aria-hidden="true">Next Post</span>
+												<div class="pager-post-name">
+												<h3>{{title}}</h3></div>
+											</a>
+										</li>
+								  	{{/next_post}}
+								</ul>
+						  	</nav>
+						</div>
+						{{! POST NAV END }}
+
+						{{! POST RELATED START }}
+						{{> "related-posts" }}
+						{{! POST RELATED END }}
+
+						{{! COMMENT START }}
+						{{> "comments-disqus" }}
+						{{! COMMENT END }}
+					</article>
+				</div>
+				{{! POST END }}
+				{{! ADVERT START }}
+				{{> "advert" }}
+				{{! ADVERT END }}
+			</div>
+			{{! SITE CONTENT LEFT END }}
+			{{! SITE CONTENT RIGHT START }}
+			<div class="col-sm-4 col-xs-12 site-content-right">
+				<aside class="sidebar-right sidebar">
+					{{! WIDGET START }}
+					{{> "last-posts-widget" }}
+					{{! WIDGET END }}
+
+					{{! WIDGET START }}
+					{{> "social-links-widget" }}
+					{{! WIDGET END }}
+
+					{{! WIDGET START }}
+					{{> "twitter-widget" }}
+					{{! WIDGET END }}
+
+					{{! WIDGET START }}
+					{{> "facebook-widget" }}
+					{{! WIDGET END }}
+
+					{{! WIDGET START }}
+					{{> "advertisement-widget" }}
+					{{! WIDGET END }}
+				</aside>
+			</div>
+			{{! SITE CONTENT RIGHT END }}
+		</div>
+	</div>
+{{/post}}

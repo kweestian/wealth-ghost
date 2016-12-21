@@ -1,0 +1,36 @@
+{{#if @labs.publicAPI}}
+	{{#get "posts" include="tags,author" filter="id:-{{id}}+tags:[{{tags[*].slug}}]" limit="4"}}
+	<div class="post-related">
+		<div class="post-related-row">
+			<div class="title">
+				<h3>You May Also Like</h3>
+			</div>
+			<div class="relatedposts">
+				{{! ITEM START }}
+				{{#foreach posts}}
+					<div class="item">
+						<div class="image"{{#if image}} style="background-image:url({{image}});"{{/if}}>
+							{{#if tags}}
+								<div class="category">
+									{{#foreach tags}}
+										<a href="{{url}}">{{name}}</a>
+									{{/foreach}}							
+								</div>
+							{{/if}}
+						</div>
+						<div class="desc">
+							<ul>
+								<li>{{author}}</li>
+								<li class="separate"></li>
+								<li>{{date format="MMMM DD, YYYY"}}</li>
+							</ul>
+							<h3><a href="{{url}}">{{title}}</a></h3>
+						</div>
+					</div>
+				{{/foreach}}
+				{{! ITEM END }}
+			</div>
+		</div>
+	</div>
+	{{/get}}
+{{/if}}

@@ -1,0 +1,58 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+<div class="row">
+
+  {{! AUTHOR INFO START }}
+  {{> "about-me-widget" }}
+  {{! AUTHOR INFO END }}
+
+  <div class="home-content">
+    {{! SITE CONTENT LEFT START }}
+    <div class="col-sm-8 col-xs-12 site-content-left">
+      {{! HOME POST LIST START }}
+      <div class="home-post-list">
+        {{! POST START }}
+            {{! The tag below includes the post loop - partials/loop.hbs }}
+            {{> "loop"}}
+        {{! POST END }}
+      </div>
+      {{! HOME POST LIST END }}
+
+      {{! ADVERT START }}
+      {{> "advert" }}
+      {{! ADVERT END }}
+
+      {{! PAGINATION START }}
+      {{pagination}}
+      {{! PAGINATION END }}
+
+    </div>
+    {{! SITE CONTENT LEFT END }}
+    {{! SITE CONTENT RIGHT START }}
+    <div class="col-sm-4 col-xs-12 site-content-right">
+      <aside class="sidebar-right sidebar">
+        {{! WIDGET START }}
+        {{> "last-posts-widget" }}
+        {{! WIDGET END }}
+
+        {{! WIDGET START }}
+        {{> "social-links-widget" }}
+        {{! WIDGET END }}
+
+        {{! WIDGET START }}
+        {{> "facebook-widget" }}
+        {{! WIDGET END }}
+
+        {{! WIDGET START }}
+        <!-- {{> "advertisement-widget" }} -->
+        {{! WIDGET END }}
+
+        {{! WIDGET START }}
+        {{> "tags-widget" }}
+        {{! WIDGET END }}
+      </aside>
+    </div>
+    {{! SITE CONTENT RIGHT END }}
+  </div>
+</div>

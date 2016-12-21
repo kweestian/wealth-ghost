@@ -1,0 +1,461 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+	attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+{{#post}}
+{{^has tag="left,right"}}
+<div class="site-page-content">
+	{{! PAGE START }}
+	<div class="page-content">
+		<article class="page">
+			{{! PAGE TITLE START }}
+			<h1 class="page-title">{{title}}</h1>
+			{{! PAGE TITLE END }}
+			{{! PAGE BANNER START }}
+			{{#if image}}
+				<div class="page-banner-image">
+					<img src="{{image}}" alt="{{title}}" />
+				</div>
+			{{/if}}
+			{{! PAGE BANNER END }}
+			<h4>Tabs</h4>
+         <div class="panel panel-default">
+           <div class="panel-body">
+             <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+               <li class="tabs active"><a data-toggle="tab" href="#tab1-slug">Home</a></li>
+               <li class="tabs "><a data-toggle="tab" href="#tab2-slug">Profile</a></li>
+               <li class="tabs "><a data-toggle="tab" href="#tab3-slug">Messages</a></li>
+             </ul>
+             <div id="my-tab-content" class="tab-content">
+               <div id="tab1-slug" class="tab-pane active">
+                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.&nbsp;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
+               </div>
+               <div id="tab2-slug" class="tab-pane ">
+                 <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+               </div>
+               <div id="tab3-slug" class="tab-pane ">
+                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum you need to be sure there isn’t anything..</p>
+               </div>
+             </div>
+           </div>
+         </div>
+         <hr/>
+         <div class="clearfix" style="margin-top:-30px">
+           <div>
+             <h4>Dropdown Buttons</h4>
+             <div class="panel panel-default" style="display:table;">
+               <div class="panel-body">
+                 <div class="bs-example" data-example-id="split-button-dropdown">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-default">Default</button>
+                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       <span class="caret"></span>
+                       <span class="sr-only">Toggle Dropdown</span>
+                     </button>
+                     <ul class="dropdown-menu">
+                       <li><a href="#">Example Link</a></li>
+                       <li><a href="#">Example Link 1</a></li>
+                       <li><a href="#">Example Link 2</a></li>
+                       <li><a href="#">Example Link 3</a></li>
+                     </ul>
+                   </div>
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-primary">Primary</button>
+                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       <span class="caret"></span>
+                       <span class="sr-only">Toggle Dropdown</span>
+                     </button>
+                     <ul class="dropdown-menu">
+                       <li><a href="#">Example Link</a></li>
+                       <li><a href="#">Example Link 1</a></li>
+                       <li><a href="#">Example Link 2</a></li>
+                       <li><a href="#">Example Link 3</a></li>
+                     </ul>
+                   </div>
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-success">Success</button>
+                     <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       <span class="caret"></span>
+                       <span class="sr-only">Toggle Dropdown</span>
+                     </button>
+                     <ul class="dropdown-menu">
+                       <li><a href="#">Example Link</a></li>
+                       <li><a href="#">Example Link 1</a></li>
+                       <li><a href="#">Example Link 2</a></li>
+                       <li><a href="#">Example Link 3</a></li>
+                     </ul>
+                   </div>
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-info">Info</button>
+                     <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       <span class="caret"></span>
+                       <span class="sr-only">Toggle Dropdown</span>
+                     </button>
+                     <ul class="dropdown-menu">
+                       <li><a href="#">Example Link</a></li>
+                       <li><a href="#">Example Link 1</a></li>
+                       <li><a href="#">Example Link 2</a></li>
+                       <li><a href="#">Example Link 3</a></li>
+                     </ul>
+                   </div>
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-warning">Warning</button>
+                     <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       <span class="caret"></span>
+                       <span class="sr-only">Toggle Dropdown</span>
+                     </button>
+                     <ul class="dropdown-menu">
+                       <li><a href="#">Example Link</a></li>
+                       <li><a href="#">Example Link 1</a></li>
+                       <li><a href="#">Example Link 2</a></li>
+                       <li><a href="#">Example Link 3</a></li>
+                     </ul>
+                   </div>
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-danger">Danger</button>
+                     <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       <span class="caret"></span>
+                       <span class="sr-only">Toggle Dropdown</span>
+                     </button>
+                     <ul class="dropdown-menu">
+                       <li><a href="#">Example Link</a></li>
+                       <li><a href="#">Example Link 1</a></li>
+                       <li><a href="#">Example Link 2</a></li>
+                       <li><a href="#">Example Link 3</a></li>
+                     </ul>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+         <hr/>
+         <h4>Alerts</h4>
+         <div class="panel panel-default">
+           <div class="panel-body">
+             <div class="alert alert-success">
+               <button type="button" class="close" data-dismiss="alert">×</button>
+               <p><strong>Well done!</strong> You successfully read this important alert message.</p>
+             </div>
+             <div class="alert alert-info">
+               <button type="button" class="close" data-dismiss="alert">×</button>
+               <p><strong>Heads up!</strong> This alert needs your attention, but it's not super important.</p>
+             </div>
+             <div class="alert alert-warning">
+               <button type="button" class="close" data-dismiss="alert">×</button>
+               <p><strong>Warning!</strong> Best check yo self, you're not looking too good.</p>
+             </div>
+             <div class="alert alert-danger" style="margin-bottom:0px;">
+               <button type="button" class="close" data-dismiss="alert">×</button>
+               <p><strong>Oh snap!</strong> Change a few things up and try submitting again.</p>
+             </div>
+           </div>
+         </div>
+         <hr/>
+         <h4>Progress Bars</h4>
+         <div class="panel panel-default">
+           <div class="panel-body">
+             <div class="progress">
+               <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                 <span class="sr-only">40%</span>
+               </div>
+             </div>
+             <div class="progress">
+               <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                 <span class="sr-only">20%</span>
+               </div>
+             </div>
+             <div class="progress">
+               <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                 <span class="sr-only">60%</span>
+               </div>
+             </div>
+             <div class="progress">
+               <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                 <span class="sr-only">80%</span>
+               </div>
+             </div>
+           </div>
+         </div>
+         <hr/>
+         <h4>Accordions</h4>
+         <div class="panel panel-default">
+           <div class="panel-body">
+             <div class="panel-group " id="accordion" role="tablist" aria-multiselectable="true">
+               <div class="panel panel-default">
+                 <div class="panel-heading" role="tab" id="headingshortcode1">
+                   <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" class="accordion-toggle" aria-controls="collapseshortcode1" href="#collapseshortcode1">Life</a></h4>
+                 </div>
+                 <div id="collapseshortcode1" role="tabpanel" aria-labelledby="headingshortcode1" class="panel-collapse collapse in">
+                   <div class="panel-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</div>
+                 </div>
+               </div>
+               <div class="panel panel-default">
+                 <div class="panel-heading" role="tab" id="headingshortcode2">
+                   <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" class="accordion-toggle" aria-controls="collapseshortcode2" href="#collapseshortcode2">Fashion</a></h4>
+                 </div>
+                 <div id="collapseshortcode2" role="tabpanel" aria-labelledby="headingshortcode2" class="panel-collapse collapse ">
+                   <div class="panel-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</div>
+                 </div>
+               </div>
+               <div class="panel panel-default">
+                 <div class="panel-heading" role="tab" id="headingshortcode3">
+                   <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" class="accordion-toggle" aria-controls="collapseshortcode3" href="#collapseshortcode3">Sports</a></h4>
+                 </div>
+                 <div id="collapseshortcode3" role="tabpanel" aria-labelledby="headingshortcode3" class="panel-collapse collapse ">
+                   <div class="panel-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+         <hr/>
+         <h4>Buttons</h4>
+         <div class="panel panel-default">
+           <div class="panel-body">
+             <div class="row full-button">
+               <div class="col-sm-2 col-xs-12">
+                 <div class="jupios_button jupios_button_style1" style="border-color:#000000;">
+                   <a href="#" style="color:#000000;border-color:#000000;">BUTTON</a>
+                 </div>
+               </div>
+               <div class="col-sm-2 col-xs-12">
+                 <div class="jupios_button jupios_button_style1" style="border-color:#A69233;">
+                   <a href="#" style="color:#A69233;border-color:#A69233;">BUTTON</a>
+                 </div>
+               </div>
+               <div class="col-sm-2 col-xs-12">
+                 <div class="jupios_button jupios_button_style1" style="border-color:#CB0D0D;">
+                   <a href="#" style="color:#CB0D0D;border-color:#CB0D0D;">BUTTON</a>
+                 </div>
+               </div>
+               <div class="col-sm-2 col-xs-12">
+                 <div class="jupios_button jupios_button_style1" style="border-color:#35598B;">
+                   <a href="#" style="color:#35598B;border-color:#35598B;">BUTTON</a>
+                 </div>
+               </div>
+               <div class="col-sm-2 col-xs-12">
+                 <div class="jupios_button jupios_button_style1" style="border-color:#639631;">
+                   <a href="#" style="color:#639631;border-color:#639631;">BUTTON</a>
+                 </div>
+               </div>
+               <div class="col-sm-2 col-xs-12">
+                 <div class="jupios_button jupios_button_style1" style="border-color:#963C86;">
+                   <a href="#" style="color:#963C86;border-color:#963C86;">BUTTON</a>
+                 </div>
+               </div>
+             </div>
+             <!-- ROW END -->
+             <!-- ROW START -->
+             <div class="row full-button">
+               <div class="col-sm-2 col-xs-12">
+                 <div class="jupios_button jupios_button_style2" style="border-color:#000000;">
+                   <a href="#" style="color:#000000;border-color:#000000;">BUTTON</a>
+                 </div>
+               </div>
+               <div class="col-sm-2 col-xs-12">
+                 <div class="jupios_button jupios_button_style2" style="border-color:#A69233;">
+                   <a href="#" style="color:#A69233;border-color:#A69233;">BUTTON</a>
+                 </div>
+               </div>
+               <div class="col-sm-2 col-xs-12">
+                 <div class="jupios_button jupios_button_style2" style="border-color:#CB0D0D;">
+                   <a href="#" style="color:#CB0D0D;border-color:#CB0D0D;">BUTTON</a>
+                 </div>
+               </div>
+               <div class="col-sm-2 col-xs-12">
+                 <div class="jupios_button jupios_button_style2" style="border-color:#35598B;">
+                   <a href="#" style="color:#35598B;border-color:#35598B;">BUTTON</a>
+                 </div>
+               </div>
+               <div class="col-sm-2 col-xs-12">
+                 <div class="jupios_button jupios_button_style2" style="border-color:#639631;">
+                   <a href="#" style="color:#639631;border-color:#639631;">BUTTON</a>
+                 </div>
+               </div>
+               <div class="col-sm-2 col-xs-12">
+                 <div class="jupios_button jupios_button_style2" style="border-color:#963C86;">
+                   <a href="#" style="color:#963C86;border-color:#963C86;">BUTTON</a>
+                 </div>
+               </div>
+             </div>
+             <!-- ROW END -->
+             <!-- ROW START -->
+             <div class="row full-button">
+               <div class="col-sm-2 col-xs-12">
+                 <div class="jupios_button jupios_button_style3" style="background-color:#000000;border-color:#000000;">
+                   <a href="#" style="color:#FFFFFF;border-color:#000000;">BUTTON</a>
+                 </div>
+               </div>
+               <div class="col-sm-2 col-xs-12">
+                 <div class="jupios_button jupios_button_style3" style="background-color:#A69233;border-color:#A69233;">
+                   <a href="#" style="color:#FFFFFF;border-color:#A69233;">BUTTON</a>
+                 </div>
+               </div>
+               <div class="col-sm-2 col-xs-12">
+                 <div class="jupios_button jupios_button_style3" style="background-color:#CB0D0D;border-color:#CB0D0D;">
+                   <a href="#" style="color:#FFFFFF;border-color:#CB0D0D;">BUTTON</a>
+                 </div>
+               </div>
+               <div class="col-sm-2 col-xs-12">
+                 <div class="jupios_button jupios_button_style3" style="background-color:#35598B;border-color:#35598B;">
+                   <a href="#" style="color:#FFFFFF;border-color:#35598B;">BUTTON</a>
+                 </div>
+               </div>
+               <div class="col-sm-2 col-xs-12">
+                 <div class="jupios_button jupios_button_style3" style="background-color:#639631;border-color:#639631;">
+                   <a href="#" style="color:#FFFFFF;border-color:#639631;">BUTTON</a>
+                 </div>
+               </div>
+               <div class="col-sm-2 col-xs-12">
+                 <div class="jupios_button jupios_button_style3" style="background-color:#963C86;border-color:#963C86;">
+                   <a href="#" style="color:#FFFFFF;border-color:#963C86;">BUTTON</a>
+                 </div>
+               </div>
+             </div>
+             <!-- ROW END -->
+           </div>
+         </div>
+         <hr/>
+         <h4>Icons</h4>
+         <div class="panel panel-default">
+           <div class="panel-body">
+             <p>
+               <i class="icon-shortcode fa fa-bed" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-heart" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-windows" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-wordpress" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-whatsapp" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-steam" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-spotify" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-play" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-arrow-down" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-dollar" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-eur" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-credit-card" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-google-wallet" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-truck" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-star-o" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-street-view" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-suitcase" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-sun-o" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-anchor" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-bell-o" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-bicycle" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-camera-retro" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-graduation-cap" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-futbol-o" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-language" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-umbrella" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-server" style="font-size:30px;"></i>
+               <i class="icon-shortcode fa fa-spinner" style="font-size:30px; color:#1D4D70;"></i>
+               <i class="icon-shortcode fa fa-table" style="font-size:30px; color:#F83A3A;"></i>
+             </p>
+             +500 Icon has been added. <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank" rel="nofollow">Click here for a list of icons.</a>
+
+		</article>
+	</div>
+	{{! PAGE END }}
+</div>
+{{/has}}
+{{#has tag="left"}}
+{{! PAGE TITLE START }}
+<h1 class="page-title">{{title}}</h1>
+{{! PAGE TITLE END }}
+{{! PAGE CONTENT START }}
+<div class="row">
+{{! PAGE CONTENT START }}
+	<div class="home-content">
+		{{! SITE CONTENT LEFT START }}
+		<div class="col-sm-4 col-xs-12 site-content-right">
+			<aside class="sidebar-right sidebar">
+
+				{{! WIDGET START }}
+				{{> "last-posts-widget" }}
+				{{! WIDGET END }}
+
+				{{! WIDGET START }}
+				{{> "social-links-widget" }}
+				{{! WIDGET END }}
+
+				{{! WIDGET START }}
+				{{> "twitter-widget" }}
+				{{! WIDGET END }}
+
+				{{! WIDGET START }}
+				{{> "facebook-widget" }}
+				{{! WIDGET END }}
+
+				{{! WIDGET START }}
+				{{> "advertisement-widget" }}
+				{{! WIDGET END }}
+
+			</aside>
+		</div>
+		{{! SITE CONTENT LEFT END }}
+		{{! SITE CONTENT RIGHT START }}
+		<div class="col-sm-8 col-xs-12 site-content-left">
+			{{! PAGE START }}
+			<div class="page-content">
+				<article class="page">
+				{{content}}
+				</article>
+			</div>
+			{{! PAGE END }}
+		</div>
+		{{! SITE CONTENT RIGHT END }}
+	</div>
+	{{! PAGE CONTENT END }}
+</div>
+{{/has}}
+{{#has tag="right"}}
+{{! PAGE TITLE START }}
+<h1 class="page-title">{{title}}</h1>
+{{! PAGE TITLE END }}
+{{! PAGE CONTENT START }}
+<div class="row">
+{{! PAGE CONTENT START }}
+    <div class="home-content">
+        {{! SITE CONTENT LEFT START }}
+        <div class="col-sm-8 col-xs-12 site-content-left">
+            {{! PAGE START }}
+            <div class="page-content">
+                <article class="page">
+                {{content}}
+                </article>
+            </div>
+            {{! PAGE END }}
+        </div>
+        {{! SITE CONTENT LEFT END }}
+        {{! SITE CONTENT RIGHT START }}
+        <div class="col-sm-4 col-xs-12 site-content-right">
+            <aside class="sidebar-right sidebar">
+                {{! WIDGET START }}
+                {{> "last-posts-widget" }}
+                {{! WIDGET END }}
+
+                {{! WIDGET START }}
+                {{> "social-links-widget" }}
+                {{! WIDGET END }}
+
+                {{! WIDGET START }}
+                {{> "twitter-widget" }}
+                {{! WIDGET END }}
+
+                {{! WIDGET START }}
+                {{> "facebook-widget" }}
+                {{! WIDGET END }}
+
+                {{! WIDGET START }}
+                {{> "advertisement-widget" }}
+                {{! WIDGET END }}
+            </aside>
+        </div>
+        {{! SITE CONTENT RIGHT END }}
+    </div>
+    {{! PAGE CONTENT END }}
+</div>
+{{/has}}
+{{/post}}

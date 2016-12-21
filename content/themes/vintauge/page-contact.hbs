@@ -1,0 +1,46 @@
+{{!< default}}
+
+{{! This is a page contact template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+
+{{#post}}
+<div class="site-page-content">
+    {{! PAGE START }}
+    <div class="page-content">
+        <article class="page">
+            {{! PAGE TITLE START }}
+            <h1 class="page-title">{{title}}</h1>
+            {{! PAGE TITLE END }}
+            {{! PAGE BANNER START }}
+            {{#if image}}
+                <div class="page-banner-image">
+                    <img src="{{image}}" alt="{{title}}" />
+                </div>
+            {{/if}}
+            {{! PAGE BANNER END }}
+            <div class="row">
+                <div class="col-sm-8 col-xs-12">
+                    {{content}}
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                  <h1 class="subpage-title">Social Media</h1>
+                  <p>Vestibulum risus nisl, gravida sed lobortis sit amet, ornare eu est. Mauris blandit malesuada vulputate. Vestibulum tristique neque at pretium accumsan. Sed aliquam purus dolor, ac tempus purus vulputate eget.</p>
+                  <div class="contact-page-social-media">
+                    <ul>
+                      <li><a href="#" title="Share to Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#" title="Share to Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#" title="Share to Google+" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                      <li><a href="#" title="Share to Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                      <li><a href="#" title="Share to Pinterest" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+
+            </div>
+        </article>
+    </div>
+    {{! PAGE END }}
+</div>
+{{/post}}

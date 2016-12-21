@@ -1,0 +1,42 @@
+{{! This is the post loop - each post will be output using this markup }}
+{{#foreach posts}}
+    <article class="post format-standard">
+      <div class="image">
+        <a href="{{url}}" style="background-image:url({{image}});"></a>
+        <div class="category">
+            {{#foreach tags}}
+              <a href="{{url}}">{{name}}</a>
+            {{/foreach}}               
+        </div>
+      </div>
+      <div class="desc">
+        <div class="post-desc-top">
+          <ul>
+            <li><a href="{{author.url}}">{{author.name}}</a></li>
+            <li class="separate"></li>
+            <li><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM D, YYYY"}}</time></li>
+          </ul>
+          <h3><a href="{{url}}">{{title}}</a></h3>
+        </div>
+        <div class="post-desc-bottom">
+          <p>{{excerpt words="54"}}</p>
+          <ul class="post-social-icons">
+            <li class="comment"><a href="#"><i class="fa fa-comment"></i></a></li>
+            <li class="share">
+              <a><i class="fa fa-share-alt"></i></a>
+              <div class="share-social-media-links">
+                <ul>
+                  <li><a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" title="Share to Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="https://twitter.com/home?status={{url absolute="true"}}%20{{tags prefix="%23" separator="%20%23" autolink="false"}}" title="Share to Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="https://plus.google.com/share?url={{url absolute="true"}}" title="Share to Google+" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{url absolute="true"}}&amp;title={{encode title}}&amp;summary={{excerpt words="45"}}&amp;source={{@blog.title}}" title="Share to Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a href="https://pinterest.com/pin/create/button/?{{url absolute="true"}}{{#if image}}&amp;media={{@blog.url}}{{image}}{{/if}}&amp;description={{excerpt words="20"}}" title="Share to Pinterest" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <a class="more-button" href="{{url}}"><span>Read More</span></a>
+        </div>
+      </div>
+    </article>
+{{/foreach}}

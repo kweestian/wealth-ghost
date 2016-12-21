@@ -1,0 +1,22 @@
+{{#if @labs.publicAPI}}
+	<div class="sidebar-right-wrap widget-box widget_vintaug_latest_latest_posts_widget">
+		<div class="widget-title">
+			<h4>Latest Posts</h4>
+		</div>
+		<div class="widget-content">
+			<ul class="latest-posts-widget">
+				{{#get "posts" limit="5" include="tags"}}
+					{{#foreach posts}}
+						<li>
+							{{#if image}}
+								<a class="image" href="{{url}}" style="background-image:url({{image}});"></a>
+							{{/if}}
+							<h3><a href="{{url}}">{{title}}</a></h3>
+							<time datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM DD, YYYY"}}</time>
+						</li>
+					{{/foreach}}
+				{{/get}}
+			</ul>
+		</div>
+	</div>
+{{/if}}

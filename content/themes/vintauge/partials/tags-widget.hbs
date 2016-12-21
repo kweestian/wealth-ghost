@@ -1,0 +1,14 @@
+{{#if @labs.publicAPI}}
+<div class="sidebar-right-wrap widget-box widget_instagram">
+	<div class="widget-title">
+		<h4>Tags</h4>
+	</div>
+	<div class="tagcloud">
+		{{#get "tags" limit="all" include="count.posts,tags" order="count.posts desc" filter="name:-['left', 'right']"}}
+			{{#foreach tags}}
+				<a  style="font-size: 12px;" href="/tag/{{slug}}">{{name}}</a>
+			{{/foreach}}
+		{{/get}}
+	</div>
+</div>
+{{/if}}

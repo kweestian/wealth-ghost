@@ -1,0 +1,35 @@
+{{! This is the About Me widget - it will be output using this markup }}
+{{#if @labs.publicAPI}}
+	{{#get "users" filter="id:1"}}
+		{{#users}}
+		<div class="author-info-area">
+			<div class="image">
+				<a class="avatar" href="{{url}}" style="background-image: url({{image}});"></a>
+			</div>
+			<div class="desc">
+				<h4>About Me</h4>
+				<h3>{{name}}</h3>
+				{{#if bio}}
+					<p>{{bio}}</p>
+				{{/if}}
+				<div class="author-social-link">
+					<ul>
+						{{#if facebook}}
+							<li><a href="{{facebook_url}}"><i class="fa fa-facebook"></i>{{facebook}}</a></li>
+						{{/if}}
+						{{#if twitter}}
+							<li><a href="{{twitter_url}}"><i class="fa fa-twitter"></i>{{twitter}}</a></li>
+						{{/if}}
+						{{#if location}}
+							<li><i class="fa fa-map-marker"></i>{{location}}</li>
+						{{/if}}
+						{{#if website}}
+							<li><a href="{{website}}"><i class="fa fa-link"></i>{{website}}</a></li>
+						{{/if}}
+					</ul>
+				</div>
+			</div>
+		</div>
+		{{/users}}
+	{{/get}}
+{{/if}}
