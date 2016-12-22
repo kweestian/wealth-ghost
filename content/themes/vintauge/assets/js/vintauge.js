@@ -136,7 +136,7 @@ $(function(){
             get: 'user',
             userId: 2226108077,
             resolution: 'low_resolution',
-            imit: 25,
+            limit: 25,
             accessToken: '4271500393.ba4c844.5dc57533185749af951aa20070e774c4',
             after: function () {
                 var owl = $('.owl2row-plugin');
