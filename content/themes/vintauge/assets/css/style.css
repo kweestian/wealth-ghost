@@ -3422,6 +3422,8 @@ i.icon-shortcode {
 		clear: both;
 	}
 
+
+
 	.header-social-media ul {
 		margin: 0px;
 	}
@@ -3532,4 +3534,8 @@ i.icon-shortcode {
 	.post-social-icons li {
 		margin-left: 3px;
 	}
+}
+
+.header-logo .site-logo img {
+	width: 50%;
 }
