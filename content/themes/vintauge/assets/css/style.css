@@ -61,7 +61,7 @@ a, a:visited {
 
 a:hover, a:focus {
 	text-decoration:none;
-	color:#FB5F84;
+	color:#ac9a63;
 	-webkit-transition:0.2s;
 	-moz-transition:0.2s;
 	-o-transition:0.2s;
@@ -208,8 +208,8 @@ button, input[type="submit"] {
 	-ms-transition:0.2s;
 	transition:0.2s;
 	border:0px;
-	background-color: #FB5F84;
-	border-color: #FB5F84;
+	background-color: #ac9a63;
+	border-color: #ac9a63;
 	border-radius: 0px;
 	border-width:1px;
 	font-size:14px;
@@ -231,8 +231,8 @@ button:focus, input[type="submit"]:focus {
 	-ms-transition:0.2s;
 	transition:0.2s;
 	opacity:0.6;
-	background: #FB5F84;
-	border-color: #FB5F84;
+	background: #ac9a63;
+	border-color: #ac9a63;
 	border-radius: 0px;
 	outline:0;
 }
@@ -249,7 +249,7 @@ blockquote {
 
 blockquote:after, blockquote:before {
 	display: inline-block;
-	color: #FB5F84;
+	color: #ac9a63;
 	font-size: 70px;
 	font-style: normal;
 }
@@ -377,7 +377,7 @@ a.more-button:after {
 	height: 0;
 	top: 0;
 	left: 0;
-	background: #FB5F84;
+	background: #ac9a63;
 }
 
 a.more-button:hover:after, a.more-button:active:after {
@@ -414,7 +414,7 @@ a.more-button:focus span {
 
 a.more-button:hover,
 a.more-button:focus {
-	border-color:#FB5F84;
+	border-color:#ac9a63;
 }
 
 a.more-button:hover span:after,
@@ -1086,8 +1086,8 @@ a.more-button span:before {
 .contact-page-social-media ul li a:hover,
 .contact-page-social-media ul li a:focus {
 	color:#FFFFFF;
-	border-color:#FB5F84;
-	background:#FB5F84;
+	border-color:#ac9a63;
+	background:#ac9a63;
 }
 
 .contact-page-social-media ul li {
@@ -1131,7 +1131,7 @@ a.more-button span:before {
 	padding: 12px 0px;
 	background: transparent;
 	font-size: 16px;
-	color: #FB5F84;
+	color: #ac9a63;
 }
 
 .search-form-widget button:hover, .search-form-widget input[type="submit"]:hover,
@@ -1166,7 +1166,7 @@ a.more-button span:before {
 	content:'';
 	display:block;
 	height:3px;
-	background:#FB5F84;
+	background:#ac9a63;
 	position: relative;
 	top: 2px;
 }
@@ -1194,8 +1194,8 @@ a.more-button span:before {
 .widget_vintauge_social_media_widget .widget-social li a:hover,
 .widget_vintauge_social_media_widget .widget-social li a:focus {
 	color:#FFFFFF;
-	border-color:#FB5F84;
-	background:#FB5F84;
+	border-color:#ac9a63;
+	background:#ac9a63;
 }
 
 .widget_vintauge_social_media_widget .widget-social li {
@@ -1325,7 +1325,7 @@ a.more-button span:before {
 }
 
 .header-social-media ul li a:hover, .header-social-media ul li a:focus {
-	color:#FB5F84;
+	color:#ac9a63;
 }
 
 .header-social-media {
@@ -1388,7 +1388,7 @@ a.more-button span:before {
 
 .header-search i {
 	float: right;
-	background: #FB5F84;
+	background: #ac9a63;
 	border: 0px;
 	font-size: 11px;
 	color: #FFFFFF;
@@ -1533,7 +1533,7 @@ a.more-button span:before {
 
 .post-social-icons a:hover,
 .post-social-icons a:focus {
-	color:#FB5F84;
+	color:#ac9a63;
 }
 
 .share-social-media-links {
@@ -1557,7 +1557,7 @@ a.more-button span:before {
 	padding: 5px 15px;
 	visibility: hidden;
 	opacity: 0;
-	background: #FB5F84;
+	background: #ac9a63;
 	transition: all 0.4s;
 	-webkit-transition: all 0.4s;
 	-moz-transition: all 0.4s;
@@ -1587,7 +1587,7 @@ a.more-button span:before {
 	position: absolute;
 	top: 50px;
 	left: 10%;
-	background: #FB5F84;
+	background: #ac9a63;
 	font-size: 13px;
 	font-family: 'Oswald';
 	font-weight: 500;
@@ -1678,7 +1678,7 @@ a.more-button span:before {
 	font-size: 18px;
 	margin: 0px 0px 15px;
 	font-weight: 600;
-	color: #FB5F84;
+	color: #ac9a63;
 }
 
 .author-info-area .desc p {
@@ -1713,7 +1713,7 @@ a.more-button span:before {
 .home-post-list .image .category a {
 	display: inline-block;
 	color: #FFF;
-	background: #FB5F84;
+	background: #ac9a63;
 	font-size: 13px;
 	font-family: 'Oswald';
 	font-weight: 500;
@@ -1929,7 +1929,7 @@ a.more-button span:before {
 .home-two-post-list .image .category a {
 	display: inline-block;
 	color: #FFF;
-	background: #FB5F84;
+	background: #ac9a63;
 	font-size: 13px;
 	font-family: 'Oswald';
 	font-weight: 500;
@@ -2017,11 +2017,11 @@ a.more-button span:before {
 }
 
 .nav-tabs>li>a:hover {
-	border-color: #FB5F84 #FB5F84 #FB5F84;
+	border-color: #ac9a63 #ac9a63 #ac9a63;
 }
 
 .nav>li>a:focus, .nav>li>a:hover {
-	background-color: #FB5F84;
+	background-color: #ac9a63;
 	color: #FFF;
 }
 
@@ -2245,7 +2245,7 @@ i.icon-shortcode {
 .page404-content h3 span {
 	border: 1px solid #959595;
 	display: block;
-	color: #FB5F84;
+	color: #ac9a63;
 	text-transform: uppercase;
 	font-weight: 500;
 	line-height: 35px;
@@ -2325,7 +2325,7 @@ i.icon-shortcode {
 }
 
 .comment .comment-body .comment-author .reply {
-	background:#FB5F84;
+	background:#ac9a63;
 	text-transform:uppercase;
 	font-family:'Playfair Display';
 	display:table;
@@ -2505,7 +2505,7 @@ i.icon-shortcode {
 	color: #FFF;
 	font-weight: 500;
 	padding: 5px 10px;
-	background: #FB5F84;
+	background: #ac9a63;
 	border-radius: 5px;
 	line-height: 13px;
 	letter-spacing: 0.5px;
@@ -2548,8 +2548,8 @@ i.icon-shortcode {
 }
 
 .page-content .post .single-tag-list span:hover, .page-content .post .single-tag-list span:focus {
-	border:1px solid #FB5F84;
-	background:#FB5F84;
+	border:1px solid #ac9a63;
+	background:#ac9a63;
 	color:#FFFFFF;
 	transition: opacity 0.2s, transform 0.2s ease-in-out;
 	-webkit-transition: opacity 0.2s, transform 0.2s ease-in-out;
@@ -2561,8 +2561,8 @@ i.icon-shortcode {
 }
 
 .page-content .post .single-tag-list .single-tag-list-title {
-	border:1px solid #FB5F84;
-	background:#FB5F84;
+	border:1px solid #ac9a63;
+	background:#ac9a63;
 	color:#FFFFFF;
 }
 
@@ -2769,7 +2769,7 @@ i.icon-shortcode {
 
 .post-related .item .image .category a {
 	display: inline-block;
-	background: #FB5F84;
+	background: #ac9a63;
 	font-size: 13px;
 	font-family: 'Oswald';
 	color: #FFF;
@@ -2884,7 +2884,7 @@ i.icon-shortcode {
 
 .post-link .post-link-area:hover .post-link-area-content i {
 	border: 2px solid transparent;
-	background: #FB5F84;
+	background: #ac9a63;
 	color:#FFFFFF;
 	-webkit-transition: 0.2s;
 	-moz-transition: 0.2s;
@@ -2903,7 +2903,7 @@ i.icon-shortcode {
 	display: block;
 	height: 100%;
 	width: 100%;
-	color:#FB5F84;
+	color:#ac9a63;
 }
 
 /* =====  14. CATEGORY & ARCHIVE ===== */
@@ -2930,7 +2930,7 @@ i.icon-shortcode {
 .category-archive-title h1 span {
 	font-size:22px;
 	font-family:'Playfair Display';
-	color:#FB5F84;
+	color:#ac9a63;
 }
 
 .author-page-info-area .post-author .author-info-area {
@@ -3271,12 +3271,12 @@ i.icon-shortcode {
 	}
 
 	.header .navbar-nav>li.open>a, .header .navbar-nav>li.open>a:visited {
-		color:#FB5F84;
+		color:#ac9a63;
 	}
 
 	.header .navbar-nav>li>a:hover, .header .navbar-nav>li>a:focus {
 		background:transparent;
-		color:#FB5F84;
+		color:#ac9a63;
 	}
 	
 	.navbar {
@@ -3314,7 +3314,7 @@ i.icon-shortcode {
 	
 	.header .dropdown-menu>li>a:hover, .header .dropdown-menu>li>a:focus {
 		background:transparent;
-		color:#FB5F84;
+		color:#ac9a63;
 	}
 	
 	.header .navbar-nav li.dropdown:hover>.dropdown-menu {
@@ -3393,7 +3393,7 @@ i.icon-shortcode {
 	}
 	
 	.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
-		background-color: #FB5F84;
+		background-color: #ac9a63;
 		border-color: transparent;
 		color: #FFF;
 	}
