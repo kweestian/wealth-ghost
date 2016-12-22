@@ -11,7 +11,7 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: 'http://159.203.35.86',
+        url: 'http://wealthblog.co/',
         mail: {
           transport: 'SMTP',
             options: {
