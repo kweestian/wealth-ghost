@@ -3425,6 +3425,7 @@ i.icon-shortcode {
 
 	.header-social-media ul {
 		margin: 0px;
+		display: -webkit-inline-box;
 	}
 
 	.blog-carousel-area h3 {
