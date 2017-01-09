@@ -112,7 +112,7 @@ img {
 	-moz-transition: opacity 0.2s;
 }
 
-img:hover {
+img a:hover {
 	transition: opacity 0.2s;
 	-webkit-transition: opacity 0.2s;
 	-moz-transition: opacity 0.2s;
@@ -1314,8 +1314,7 @@ a.more-button span:before {
 }
 
 .header-social-media ul li {
-	display:inline-block;
-	font-size: 16px;
+	font-size: 40px;
 }
 
 .header-social-media ul li a,
@@ -1330,8 +1329,9 @@ a.more-button span:before {
 }
 
 .header-social-media {
-	position: absolute;
-	left: 15px;
+	position: fixed;
+	right: 15px;
+	top: 50%;
 }
 
 .header-search {
@@ -1430,7 +1430,6 @@ a.more-button span:before {
 
 /* =====  7. SLIDER ===== */
 .blog-carousel-area {
-	margin-top: -51px;
 	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.11);
 	margin-bottom: 50px;
 }

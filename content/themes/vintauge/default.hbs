@@ -29,6 +29,16 @@
 </head>
 
 <body class="{{body_class}}">
+  <div class="header-social-media">
+    <ul class="header-social-links">
+      {{#if @blog.facebook}}
+        <li><a href="{{facebook_url}}" title="Share to Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+      {{/if}}
+
+        <li><a href="https://www.instagram.com/wealthshopcanada/" title="Share to Twitter" target="_blank"><i class="fa fa-instagram"></i></a></li>
+
+    </ul>
+  </div>
 
     {{! LOADER START }}
     <div class="loader-wrapper">
@@ -45,7 +55,7 @@
     {{> "header" }}
     {{! HEADER END }}
 
-    <img class="author-info-area__background-image" src="/content/images/2016/12/header-wealth-white-mountain-hor-crop.jpg" />
+
 
     {{! HEADER END }}
     {{#is "home"}}
