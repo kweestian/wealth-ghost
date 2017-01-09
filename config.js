@@ -17,8 +17,8 @@ config = {
             options: {
               service: 'Mailgun',
               auth: {
-                user: 'postmaster@sandboxd6d2577a34904be0aaf04e6dbb05335a.mailgun.org', // mailgun username
-                pass: '8741a5df8aa2a139ac61f1f04782c61b'  // mailgun password
+                user: 'postmaster@wealthblog.co', // mailgun username
+                pass: '127df2a61228387a35a5c11787be0c23'  // mailgun password
              }
            }
         },
