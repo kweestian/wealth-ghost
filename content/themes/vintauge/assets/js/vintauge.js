@@ -141,7 +141,7 @@ $(function(){
             after: function () {
                 var owl = $('.owl2row-plugin');
                 owl.owlCarousel({
-                    loop: true,
+                    loop: false,
                     margin: 0,
                     navText:['',''],
                     nav: false,
