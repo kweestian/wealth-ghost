@@ -115,6 +115,11 @@ $(function(){
 			});
 		});
 
+    // Google search
+    $('#mySearchIcon').on("click", function() {
+      $('.googlesearch').toggle();
+    })
+
 		/*---------- FACEBOOK LIKE BOX ----------*/
 		var fbroot = $("#fb-root").is("div");
 		if(fbroot == "") {

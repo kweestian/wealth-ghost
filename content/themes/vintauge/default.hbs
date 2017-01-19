@@ -55,7 +55,20 @@
     {{> "header" }}
     {{! HEADER END }}
 
-
+    <div class="googlesearch animated slideInDown">
+      <script>
+        (function() {
+          var cx = '001398163824059635020:xrkuwgfktq8';
+          var gcse = document.createElement('script');
+          gcse.type = 'text/javascript';
+          gcse.async = true;
+          gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(gcse, s);
+        })();
+      </script>
+      <gcse:search></gcse:search>
+    </div>
 
     {{! HEADER END }}
     {{#is "home"}}

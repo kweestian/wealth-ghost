@@ -3545,3 +3545,15 @@ i.icon-shortcode {
 	margin-bottom: 100px;
 
 }
+
+.navbar__search-icon {
+	position: absolute;
+	top: 18%;
+	float: right;
+	right: 5px;
+	font-size: 21px;
+}
+
+.googlesearch {
+	display: none;
+}
