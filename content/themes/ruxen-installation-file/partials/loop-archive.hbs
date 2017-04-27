@@ -1,0 +1,37 @@
+{{! This is the post loop - each post will be output using this markup }}
+
+{{#foreach posts}}
+	<article class="post format-standard">
+		{{! POST HEADER START }}
+		<div class="post-header">
+			<div class="single-title">
+				<h1><a href="{{url}}">{{{title}}}</a></h1>
+			</div>
+			<div class="single-top-information">
+				<div class="single-top-info">
+					{{#if tags}}
+						<span class="category">{{tags separator=", "}} </span>
+					{{/if}}
+					<span class="separate">//</span>
+					<span class="date"><time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"> {{date format="D.M.YY"}}</time></span>
+				</div>
+			</div>
+		</div>
+		{{! POST HEADER END }}
+		{{! POST IMG START }}
+		{{#if image}}
+			<div class="post-img">
+				<a href="{{url}}" style="background-image: url({{image}})"></a>
+			</div>
+		{{/if}}
+		{{! POST IMG END }}
+		{{! POST CONTENT START }}
+		<div class="post-entry">
+			<p>{{excerpt words="85"}}</p>
+			<a href="{{url}}" class="more"><i class="fa fa-chevron-right"></i> More</a>
+		</div>
+		{{! POST CONTENT END }}
+	</article>
+{{/foreach}}
+
+

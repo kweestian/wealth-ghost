@@ -1,0 +1,14 @@
+{{! This is the Tag Cloud Widget - will be output using this markup }}
+
+{{#if @labs.publicAPI}}
+	<div class="general-sidebar-wrap widget-box">
+		<div class="widget-title"><h4>Tags</h4></div>
+		<div class="tagcloud">
+			{{#get "tags" limit="all" include="count.posts,tags" order="count.posts desc" filter="name:-['left', 'right']"}}
+				{{#foreach tags}}
+					<a href="/tag/{{slug}}" style="font-size: 8pt;">{{name}}</a>
+				{{/foreach}}
+			{{/get}}
+		</div>
+	</div>
+{{/if}}

@@ -1,0 +1,190 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+		the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+<section class="container">
+	<section class="site-single-content">
+		<section class="row">
+			{{! SINGLE CONTENT START }}
+			<div class="col-sm-9 col-xs-12">
+				<article class="post format-standard">
+					{{! POST HEADER START }}
+					<div class="post-header">
+						<div class="single-title">
+							<h1 class="post-title">{{title}}</h1>
+						</div>
+						<div class="single-top-information">
+							<div class="single-top-info">
+								{{#if tags}}
+									<span class="category">{{tags separator=", "}} </span>
+								{{/if}}
+								<span class="separate">//</span>
+								<span class="date"><time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMM D, YYYY"}}</time></span>
+							</div>
+						</div>
+					</div>
+					{{! POST HEADER END }}
+					{{! POST IMG START }}
+					{{#if image}}
+						<div class="post-img">
+							<img src="{{image}}" alt="{{title}}" />
+						</div>
+					{{/if}}
+					{{! POST IMG END }}
+					{{! POST CONTENT START }}
+					<div class="post-entry">
+
+						{{content}}
+
+					</div>
+					{{! POST CONTENT END }}
+					{{! POST SHARE START }}
+					<div class="post-share">
+						<div class="col-sm-6 col-xs-12 nopaddingleft">
+						{{#if tags}}
+							<div class="post-in-category">
+								<h6>Tags</h6>
+								<div class="post-in-category-list">
+								{{tags separator=", "}}
+								</div>
+							</div>
+						{{/if}}
+						</div>
+						<div class="col-sm-6 col-xs-12 nopaddingright">
+							<div class="post-social-share">
+								<ul>
+									<li><a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" title="Share to Facebook" class="share-facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="https://twitter.com/home?status={{url absolute="true"}}%20{{tags prefix="%23" separator="%20%23" autolink="false"}}" title="Share to Twitter" class="share-twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="https://plus.google.com/share?url={{url absolute="true"}}" title="Share to Google+" class="share-googleplus" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+									<li><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{url absolute="true"}}&amp;title={{encode title}}&amp;summary={{excerpt words="45"}}&amp;source={{@blog.title}}" title="Share to Linkedin" class="share-linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="https://pinterest.com/pin/create/button/?{{url absolute="true"}}{{#if image}}&amp;media={{@blog.url}}{{image}}{{/if}}&amp;description={{excerpt words="20"}}" title="Share to Pinterest" class="share-pinterest" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
+									<li><a href="http://www.reddit.com/submit/?url={{url absolute="true"}}&amp;title={{encode title}}" title="Share to Reddit" class="share-reddit" target="_blank"><i class="fa fa-reddit"></i></a></li>
+									<li><a href="http://del.icio.us/post?url={{url absolute=" true "}}%2F&amp;title={{encode title}}" title="Share to Delicious" class="share-delicious" target="_blank"><i class="fa fa-delicious"></i></a></li>
+									<li><a href="https://www.stumbleupon.com/submit?url={{url absolute="true"}}%2F&amp;title={{encode title}}" title="Share to Stumbleupon" class="share-stumbleupon" target="_blank"><i class="fa fa-stumbleupon"></i></a></li>
+									<li><a href="http://www.tumblr.com/share/link?url={{url absolute="true"}}&amp;name={{encode title}}&amp;description={{excerpt words="45"}}" title="Share to Tumblr" class="share-tumblr" target="_blank"><i class="fa fa-tumblr"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					{{! POST SHARE END }}
+					{{! POST NAV START }}
+					<div class="post-nav">
+						<nav>
+							<ul class="pager">
+								{{#prev_post}}
+									<li class="previous"><a href="{{url}}" rel="prev"><span aria-hidden="true">&lt;&lt;</span> Previous Post <div class="pager-post-name">{{title}}</div></a></li>
+								{{/prev_post}}
+								{{#next_post}}
+									<li class="next"><a href="{{url}}" rel="next">Next Post <span aria-hidden="true">&gt;&gt;</span> <div class="pager-post-name">{{title}}</div></a></li>
+								{{/next_post}}						      
+							</ul>
+						</nav>
+					</div>
+					{{! POST NAV END }}
+					{{! POST AUTHOR START }}
+					{{#author}}
+						<div class="post-author">
+							<aside class="about-author">
+								{{#if image}}
+									<div class="author-info-avatar">
+										<a class="avatar" href="{{url}}" style="background-image: url({{image}})"></a>
+									</div>
+								{{/if}}
+								<div class="author-info-description">
+									<h4><a href="{{url}}">{{name}}</a></h4>
+									<p>{{bio}}</p>
+									<div class="author-social-link">
+										<ul>
+										{{#if facebook}}
+											<li><a href="{{facebook_url}}" title="{{name}}'s Facebook Page" target="_blank"><i class="fa fa-facebook"></i></a></li>
+										{{/if}}
+										{{#if twitter}}
+											<li><a href="{{twitter_url}}" title="{{name}}'s Twitter Page" target="_blank"><i class="fa fa-twitter"></i></a></li>
+										{{/if}}
+										{{#if location}}
+											<li>
+												<i class="fa fa-map-marker"></i><span class="author-location icon-location">{{location}}</span>
+											</li>
+										{{/if}}
+										{{#if website}}
+											<li>
+												<a href="{{website}}" title="{{name}}'s Web Page" target="_blank">
+													<i class="fa fa-link"></i><span>{{website}}</span>
+												</a>
+											</li>
+										{{/if}}
+										</ul>
+									</div>
+								</div>
+							</aside>
+						</div>					
+					{{/author}}
+					{{! POST AUTHOR END }}
+					{{! POST RELATED START }}
+					{{#if @labs.publicAPI}}
+						{{#get "posts" include="tags" filter="id:-{{id}}+tags:[{{tags[*].slug}}]" limit="3"}}
+							<div class="post-related">
+								<div class="post-related-row">
+									{{#foreach posts}}
+										<div class="col-sm-4 col-xs-12">
+											<div class="related-post-info">
+												{{#if tags}}
+													<span class="category">{{tags separator=", "}}</span>
+												{{/if}}
+												<span class="separate">//</span>
+												<span class="date"><time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMM D, YYYY"}}</time></span>
+											</div>
+											<a class="relatedpostsimage" href="{{url}}" title="{{title}}" style="background-image:url({{image}});"></a>
+											<h4><a href="{{url}}">{{title}}</a></h4>
+										</div>
+									{{/foreach}}
+								</div>
+							</div>
+						{{/get}}
+					{{/if}}
+					{{! POST RELATED END }}
+				</article>
+			</div>
+			{{! SINGLE CONTENT END }}
+			{{! SIDEBAR START }}
+			<div class="col-sm-3 col-xs-12">
+				<aside class="sidebar">
+				
+					{{! WIDGET START }}
+					{{> "last-posts-widget"}}
+					{{! WIDGET END }}
+
+					{{! WIDGET START }}
+					{{> "twitter-widget"}}
+					{{! WIDGET END }}
+
+					{{! WIDGET START }}
+					{{> "tags-widget"}}
+					{{! WIDGET END }}
+
+					{{! WIDGET START }}
+					{{> "advertising-widget"}}
+					{{! WIDGET END }}
+
+					{{! WIDGET START }}
+					{{> "facebook-widget"}}
+					{{! WIDGET END }}
+
+					{{! WIDGET START }}
+					{{> "newsletter-widget"}}
+					{{! WIDGET END }}
+
+				</aside>
+			</div>
+			{{! SIDEBAR END }}
+		</section>
+	</section>
+</section>
+{{! COMMENT START }}
+{{> "comments-disqus"}}
+{{! COMMENT END }}
+{{/post}}
+

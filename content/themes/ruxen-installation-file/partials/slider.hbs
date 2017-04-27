@@ -1,0 +1,47 @@
+{{! This is the post slider loop - each post will be output using this markup }}
+
+<section class="slider-area">
+		<section id="carousel-example-generic" class="carousel slide carousel-fade" data-interval="4000" data-ride="carousel">
+			{{! SLIDE LIST START }}
+			<div class="carousel-inner" role="listbox">
+				{{! SLIDE LIST ITEM START }}
+				{{#foreach posts}}
+
+					{{#has tag="header"}}
+						<div class="item">
+							{{! SLIDE BACKGROUND START }}
+							<div class="slider-bg-img" style="background-image:url({{#if image}}{{image}}{{else}}{{asset "img/slider.jpg"}}{{/if}});"></div>
+							{{! SLIDE BACKGROUND END }}
+							{{! SLIDE CAPTION START }}
+							<div class="carousel-caption">
+								<div class="slider-post-title">
+									<span class="slider-post-title-bottom animated fadeInRightBig">{{{title}}}</span>
+								</div>
+								{{! SLIDE TITLE END }}
+								{{! SLIDE EXCERPT START }}
+								<p class="animated fadeInUpBig">{{excerpt words="26"}}</p>
+								{{! SLIDE EXCERPT END }}
+								{{! SLIDE MORE BUTTON START }}
+								<a href="{{url}}" class="more animated fadeInUpBig"><i class="fa fa-chevron-right"></i> More</a>
+								{{! SLIDE MORE BUTTON END }}
+							</div>
+							{{! SLIDE CAPTION END }}
+						</div>
+					{{/has}}
+				{{/foreach}}
+				{{! SLIDE LIST ITEM END }}
+			</div>
+			{{! SLIDE LIST END }}
+			{{! SLIDER CONTROL START }}
+			{{!-- <a class="left carousel-control left-slider-arrow" href="#carousel-example-generic" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control right-slider-arrow" href="#carousel-example-generic" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a> --}}
+			{{! SLIDER CONTROL END }}
+			<a href="#header" class="slider-down"><i class="fa fa-angle-down bounce"></i></a>
+		</section>
+</section>

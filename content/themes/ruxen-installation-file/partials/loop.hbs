@@ -1,0 +1,27 @@
+{{! This is the post loop - each post will be output using this markup }}
+
+{{#foreach posts}}
+	{{^if featured}}
+		<div class="col-sm-6 col-xs-12">
+			<article>
+				<div class="two-grid-image" style="background-image:url({{#if image}}{{image}}{{else}}{{asset "img/news.jpg"}}{{/if}})">
+					<a class="post-link" href="{{url}}"></a>
+					<div class="two-grid-item-content">
+						<div class="post-list-information">
+						{{#if tags}}
+							<span class="category">{{tags separator=", "}} </span>
+						{{/if}}
+						<span>//</span>
+						<span class="date"><time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"> {{date format="MMM D, YYYY"}}</time></span>
+						</div>
+						<div class="two-grid-title">
+							<h2><a href="{{url}}">{{{title}}}</a></h2>
+						</div>
+						<p>{{excerpt words="52"}}</p>
+						<a class="more" href="{{url}}"><i class="fa fa-chevron-right"></i> More</a>
+					</div>
+				</div>
+			</article>
+		</div>
+	{{/if}}
+{{/foreach}}

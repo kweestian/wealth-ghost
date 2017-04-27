@@ -1,0 +1,50 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! CATEGORY TITLE START }}
+<section class="category-archive-title">
+  <section class="container">
+    <h1>Category: <span>{{tag.name}}</span></h1>
+  </section>
+</section>
+{{! CATEGORY TITLE END }}
+<section class="container">
+  <section class="site-page-content">
+    <section class="row">
+      {{! PAGE CONTENT START }}
+      <div class="col-sm-9 col-xs-12">
+        <div class="category-list">
+          {{! The tag below includes the post loop - partials/loop.hbs }}
+					{{> "loop-archive"}}
+          {{! PAGINATION START }}
+          {{ pagination }}
+          {{! PAGINATION END }}
+        </div>
+      </div>
+      {{! PAGE CONTENT END }}
+      {{! SIDEBAR START }}
+      <div class="col-sm-3 col-xs-12">
+        <aside class="sidebar">
+
+         {{! WIDGET START }}
+         {{> "twitter-widget"}}
+         {{! WIDGET END }}
+
+         {{! WIDGET START }}
+         {{> "advertising-widget"}}
+         {{! WIDGET END }}
+
+         {{! WIDGET START }}
+         {{> "facebook-widget"}}
+         {{! WIDGET END }}
+
+         {{! WIDGET START }}
+         {{> "newsletter-widget"}}
+         {{! WIDGET END }}
+
+        </aside>
+      </div>
+      {{! SIDEBAR END }}
+    </section>
+  </section>
+</section>

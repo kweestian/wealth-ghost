@@ -1,0 +1,44 @@
+
+{{! This is the pagination - it will be output using this markup }}
+
+<nav class="home-page-navigation">
+	<ul class="pagination">
+    {{#if prev}}
+    	<li>
+	    	<a class="newer-posts" href="{{page_url prev}}">
+	    		<span aria-hidden="true">&lt;</span>
+			</a>
+		</li>
+    {{/if}}
+    <li class="page-number">Page {{page}} of {{pages}}</li>
+    {{#if next}}
+		<li>
+			<a href="{{page_url next}}">
+				<span aria-hidden="true">&gt;</span>
+			</a>
+		</li>
+    {{/if}}
+	</ul>
+</nav>
+
+
+
+{{!-- <nav class="pagination" role="navigation">
+    {{#if prev}}
+      <a class="newer-posts" href="{{page_url prev}}"><i class="ionicons ion-ios-arrow-back"></i></a>
+    {{/if}}
+    <span class="page-number">{{page}} of {{pages}}</span>
+    {{#if next}}
+       <a class="older-posts" href="{{page_url next}}"><i class="ionicons ion-ios-arrow-forward"></i></a>
+    {{/if}}
+</nav> --}}
+
+<script>
+    var newerPost = document.getElementsByClassName('newer-posts');
+    var url = '/blog';
+    for (i = 0; i < newerPost.length; i++) { 
+        if (newerPost[i].getAttribute('href') === '/') {
+            newerPost[i].setAttribute('href', url);
+        }
+    }
+</script>

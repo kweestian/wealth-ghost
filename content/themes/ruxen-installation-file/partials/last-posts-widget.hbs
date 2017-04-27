@@ -1,0 +1,28 @@
+{{! This is the Last Posts Widget - will be output using this markup }}
+{{#if @labs.publicAPI}}
+	<div class="general-sidebar-wrap widget-box">
+		<div class="widget-title"><h4>Latest Posts</h4></div>
+		<ul class="latest-posts-widget">
+			{{#get "posts" limit="3" include="tags"}}
+				{{#foreach posts}}
+					<li>
+						<div class="latest-posts-widget-info">
+							{{#if tags}}
+								<span class="category">{{tags separator=", "}} </span>
+							{{/if}}
+							<span class="separate">//</span>
+							<span class="date"><time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"> {{date format="MMM D, YYYY"}}</time></span>
+						</div>
+						<h3><a href="{{url}}">{{title}}</a></h3>
+						{{#if image}}
+							<div class="latest-post-images">
+								<a class="latest-post-image" href="{{url}}" style="background-image:url({{image}});"></a>
+							</div>
+						{{/if}}
+						<p>{{excerpt words="28"}}...</p>
+					</li>
+				{{/foreach}}
+			{{/get}}
+		</ul>
+	</div>
+{{/if}}

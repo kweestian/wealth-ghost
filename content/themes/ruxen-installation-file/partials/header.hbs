@@ -1,0 +1,34 @@
+{{! This is the header - it will be output using this markup }}
+
+<header class="header" id="header">
+	<section class="container">
+		{{! LOGO START }}
+		{{#if @blog.logo}}
+			<a href="{{@blog.url}}" class="site-logo">
+				<img alt="{{@blog.title}}" src="{{@blog.logo}}">
+			</a>
+		{{/if}}
+		{{! LOGO END }}
+		{{! NAV MENU START }}
+		<nav class="navbar">
+			{{! MOBILE MENU START }}
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			{{! MOBILE MENU END }}
+			{{! MENU LIST START }}
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">						
+					{{ navigation }}
+				</ul>
+			</div>
+			{{! MENU LIST END }}
+		</nav>
+		{{! NAV MENU END }}
+	</section>
+</header>

@@ -1,0 +1,134 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+		attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+
+{{#post}}
+{{#has tag="left"}}
+	{{! PAGE BANNER START }}
+	<section class="content-full-banner" style="background-image:url({{image}});">
+		<section class="container">
+			<h1>{{title}}</h1>
+			<p>{{excerpt words="7"}}</p>
+		</section>
+	</section>
+	{{! PAGE BANNER END }}
+	<section class="container">
+		<section class="site-page-content">
+			<section class="row">
+			{{! PAGE CONTENT START }}
+			<div class="col-sm-9 col-xs-12 pull-right">
+				<h3 class="page-title">{{title}}</h3>
+				{{content}}
+			</div>
+			{{! PAGE CONTENT END }}
+			{{! SIDEBAR START }}
+			<div class="col-sm-3 col-xs-12">
+				<aside class="sidebar">				
+					{{! WIDGET START }}
+					{{> "last-posts-widget"}}
+					{{! WIDGET END }}
+
+					{{! WIDGET START }}
+					{{> "twitter-widget"}}
+					{{! WIDGET END }}
+
+					{{! WIDGET START }}
+					{{> "tags-widget"}}
+					{{! WIDGET END }}
+
+					{{! WIDGET START }}
+					{{> "advertising-widget"}}
+					{{! WIDGET END }}
+
+					{{! WIDGET START }}
+					{{> "facebook-widget"}}
+					{{! WIDGET END }}
+
+					{{! WIDGET START }}
+					{{> "newsletter-widget"}}
+					{{! WIDGET END }}
+				</aside>
+			</div>
+			{{! SIDEBAR END }}
+			</section>
+		</section>
+	</section>
+{{/has}}
+{{#has tag="right"}}
+	{{! PAGE BANNER START }}
+	<section class="content-full-banner" style="background-image:url({{image}});">
+		<section class="container">
+			<h1>{{title}}</h1>
+			<p>{{excerpt words="7"}}</p>
+		</section>
+	</section>
+	{{! PAGE BANNER END }}
+	<section class="container">
+		<section class="site-page-content">
+			<section class="row">
+			{{! PAGE CONTENT START }}
+			<div class="col-sm-9 col-xs-12">
+				<h3 class="page-title">{{title}}</h3>
+				{{content}}
+			</div>
+			{{! PAGE CONTENT END }}
+			{{! SIDEBAR START }}
+			<div class="col-sm-3 col-xs-12">
+				<aside class="sidebar">
+					{{! WIDGET START }}
+					{{> "last-posts-widget"}}
+					{{! WIDGET END }}
+
+					{{! WIDGET START }}
+					{{> "twitter-widget"}}
+					{{! WIDGET END }}
+
+					{{! WIDGET START }}
+					{{> "tags-widget"}}
+					{{! WIDGET END }}
+
+					{{! WIDGET START }}
+					{{> "advertising-widget"}}
+					{{! WIDGET END }}
+
+					{{! WIDGET START }}
+					{{> "facebook-widget"}}
+					{{! WIDGET END }}
+
+					{{! WIDGET START }}
+					{{> "newsletter-widget"}}
+					{{! WIDGET END }}
+				</aside>
+			</div>
+			{{! SIDEBAR END }}
+			</section>
+		</section>
+	</section>
+{{/has}}
+{{^has tag="left,right"}}
+	{{! PAGE BANNER START }}
+	<section class="content-full-banner" {{#if image}}style="background-image:url({{image}});"{{/if}}>
+		<section class="container">
+			<h1>{{title}}</h1>
+			<p>{{excerpt words="7"}}</p>
+		</section>
+	</section>
+	{{! PAGE BANNER END }}
+	{{! PAGE CONTENT START }}
+	<section class="container">
+		<section class="site-page-content">
+			<div class="space-text">
+				<h3 class="page-title">{{title}}</h3>
+				{{content}}
+			</div>
+		</section>
+	</section>
+	{{! PAGE CONTENT END }}
+{{/has}}
+{{/post}}
+
+
+
